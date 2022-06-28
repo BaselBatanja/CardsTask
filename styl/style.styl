@@ -1,0 +1,201 @@
+@import 'styl/mixins'
+@import 'styl/variables'
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body 
+    setMarginPadding(0 , 0)
+    font-family fontType
+    box-sizing border-box
+    .page
+        setDisplayGrid((17rem 1fr),(10% 90%))
+        grid-template-areas ("head head" "nav main")
+        setWidthHeight(100% , 100vh)
+        header
+            grid-area head
+            background-color primaryColor
+            position relative
+            color white
+            box-shadow 0px 1px 8px rgba(black, 0.25)
+            h1
+                setPositionAbsolute()
+                setMarginPadding()
+        nav
+            grid-area nav
+            setDisplayFlex(flex-start,stretch,column)
+            background-color primaryColor
+            div
+                &:nth-child(1)
+                &:nth-child(2)                
+                    flex-basis 20%
+                    position relative
+                    setMarginPadding((0 50px)) 
+                    flex-basis 20%
+                a
+                    font-family fontType
+                    setPositionAbsolute()
+                    color white
+                    font-size 35px
+                    setWidthHeight(100%,fit-content)
+                    resetAnchorTag()
+                    text-align center
+                    border-radius(5px)
+                    &:hover
+                        font-weight bold
+        main
+            grid-area main
+            setMarginPadding(0,(15px 15px 0px 15px))
+            overflow auto
+            position relative
+            .newCardDiv
+                setDisplayFlex()
+                setWidthHeight(100%,100%)
+                .form
+                    setDisplayFlex()
+                    flex-basis 50%
+                    .formClass
+                        setDisplayGrid((0.5fr 0.5fr),(15% 70% 1fr))
+                        column-gap 20px
+                        setWidthHeight(fit-content,25rem)
+                        input
+                        textarea
+                            align-self flex-start
+                            outline none
+                            max-width 15rem
+                            min-width 15rem
+                        textarea
+                            min-height 15rem
+                            max-height 17rem
+                        .clickButton
+                            grid-column 2 / -1
+                            text-align center
+                            button
+                                font-family fontType
+                                border-width 0
+                                background-color primaryColor
+                                color white
+                                cursor pointer
+                                setWidthHeight(100%,fit-content)
+                                setMarginPadding((10px 0 0 0),(10px 0))
+                                &:hover
+                                    background-color shade(primaryColor,10%)
+                .preview
+                    flex-basis 50%
+                    position relative
+                    > div
+                        setPositionAbsolute()
+                        border()
+                        setMarginPadding(0,20px)
+                        text-align center
+                    .previewBox
+                        setWidthHeight(200px,240px)
+                        border()
+                        setDisplayFlex(center,center,column)
+                        gap 20px
+                        setMarginPadding(0,10px)
+                        #title
+                            flex-basis 30%
+                            max-width: 100%
+                            multiLineEllipse()
+                        #description
+                            max-width 100%
+                            flex-basis 70%
+                            multiLineEllipse(10)
+                        .empty
+                            color red
+            .yourCardsDiv
+                setDisplayGrid((repeat(auto-fill, minmax(250px, 1fr))),(repeat(auto-fit, 350px)))
+                setWidthHeight(100%,100%)
+                grid-auto-rows 350px
+                setMarginPadding(0,0)
+                gap 10px
+                .previeww
+                    border()
+                    text-align center
+                    setMarginPadding(0,20px)
+                    max-height 100%
+                    overflow hidden
+                    .firstinner
+                        setDisplayFlex(space-between,stretch,column)
+                        setWidthHeight(100%,100%)
+                        max-width 100%
+                        gap 20px
+                        h1
+                            setMarginPadding()
+                            flex-basis 20%
+                            max-height 20%
+                        .previewwBox
+                            border()
+                            setDisplayFlex(flex-start,stretch,column)
+                            setMarginPadding(0,20px)
+                            max-height 100%
+                            gap 20px
+                            overflow hidden
+                            border-radius 10px
+                            height 200px
+                            #title2
+                                flex-basis 30%
+                                multiLineEllipse()
+                                position relative
+                            #description2
+                                flex-basis: 70%
+                                multiLineEllipse(7)
+            #nodata
+                setPositionAbsolute()
+                font-size 50px
+                font-weight bold
+    #overlay
+        .ovelay
+            position fixed
+            setWidthHeight(100%,100vh)
+            background-color rgba(black,0.7)
+            z-index 40
+        .innerDiv
+            setWidthHeight(40rem,15rem)
+            background-color white
+            setPositionAbsolute()
+            border-radius(12px)
+            overflow hidden
+            z-index 50
+            .heading
+                setWidthHeight(initial,30%)
+                background-color primaryColor
+                color white
+                setDisplayFlex(space-between,center)
+                setMarginPadding((0),(0 50px 0 30px))
+                font-size 25px
+                span
+                    &:last-child
+                        opacity 0.7
+                        cursor pointer
+                        &:hover
+                            opacity 1
+            > span 
+                &:last-child
+                    setPositionAbsolute(30%,0)
+                    setWidthHeight(100%,60%)
+                    setMarginPadding(0,(25px 0 0 30px))
+                    font-size 20px
+                    transform: translate(0%,0%)
+    .spinner
+        setWidthHeight(100%,100vh)
+        setDisplayFlex()
+        background-color rgba(black,0.7)
+        z-index 200
+        position fixed
+        spinner()
+
+
+
+
+        

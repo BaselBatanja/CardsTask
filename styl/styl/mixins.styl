@@ -1,0 +1,60 @@
+setMarginPadding(value = 0,value2 = 0)
+    margin value
+    padding value2
+
+setWidthHeight(width , height)
+    width width
+    height height
+setDisplayGrid(value1,value2)
+    display grid
+    grid-template-columns value1
+    grid-template-rows value2
+setDisplayFlex(value1 = center , value2 = center , direction = row)
+    display flex
+    justify-content value1
+    align-items value2
+    flex-direction direction
+setPositionAbsolute(top = 50% , left = 50%)
+    position absolute
+    top top
+    left left
+    transform translate(-50%,-50%)
+
+border-radius(val = 5px)
+    -webkit-border-radius val
+    border-radius val
+
+resetAnchorTag()
+    background-color transparent
+    border none
+    text-decoration none
+    cursor pointer
+
+
+border(color = #ddd)
+    border 1px solid color
+
+
+multiLineEllipse(val = 3)
+    word-wrap break-word
+    overflow hidden
+    text-overflow ellipsis
+    line-height 17px
+    max-height 17px*val
+    display -webkit-box !important
+    -webkit-line-clamp val
+    -webkit-box-orient vertical
+
+spinner()
+    .lds-dual-ring
+        display inline-block
+        setWidthHeight(80px,80px)
+        &:after
+            content " "
+            display block
+            setWidthHeight(64px,64px)
+            border-radius(50%)
+            border()
+            border-color #fff transparent #fff transparent
+            animation lds-dual-ring 1.2s linear infinite
+

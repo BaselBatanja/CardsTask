@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="spinner" id="spinner" style="display: none">
+      <div class="lds-dual-ring"></div>
+    </div>
+    <div id="overlay" style="display: none">
+      <div class="ovelay" id="bluroverlay"></div>
+      <div class="innerDiv">
+        <div class="heading">
+          <span>Error</span>
+          <span id="close">X</span>
+        </div>
+        <span id="errorMessage">You must add some data</span>
+      </div>
+    </div>
+    <div class="page">
+      <header><h1>Welcome</h1></header>
+      <nav>
+        <div><a id="newCard" href="/">New Card</a></div>
+        <div><a id="yourCards" href="/">Your Cards</a></div>
+      </nav>
+      <main id="main">
+        <div class="newCardDiv" id="newCardDiv">
+          <div class="form">
+            <form class="formClass" id="formOfData">
+              <label for="titleFiled">Title</label>
+              <input type="text" id="titleFiled" />
+              <label for="descriptionField">Description</label>
+              <textarea id="descriptionField"></textarea>
+              <div class="clickButton">
+                <button>Save</button>
+              </div>
+            </form>
+          </div>
+          <div class="preview">
+            <div>
+              <h1>Preview</h1>
+              <div class="previewBox">
+                <div id="title" class="empty">'Empty'</div>
+                <div id="description" class="empty">'Empty'</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="yourCardsDiv" class="yourCardsDiv" style="display: none">
+          <!-- <div style="background-color: red"></div> -->
+        </div>
+        <div id="nodata" style="display: none">No Data Found!</div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
